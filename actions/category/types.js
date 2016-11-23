@@ -1,0 +1,5 @@
+const CAT='/CATEGOREY'
+export const ADD=CAT+'/ADD'
+export const REMOVE=CAT+'/REMOVE'
+export const LOAD=CAT+'/LOAD'
+export const UPDATE=CAT+'/UPDATE'
