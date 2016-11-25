@@ -1,14 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
 import {css,style} from 'next/css'
-import App from '../components/App'
+import App from './components/App'
 
 import { createStore } from 'redux'
 import { applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux'
 
-import appReducer from '../reducers'
-import * as actions from '../actions'
+import appReducer from './reducers'
+import * as actions from './actions'
 
 
 const DEBUGTOOLS = (typeof window !== 'undefined')?

@@ -1,0 +1,6 @@
+app/node_modules
+npm*.log
+app/yarn.*
+.git*
+.hg*
+app/.next
