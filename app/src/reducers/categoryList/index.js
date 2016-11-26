@@ -12,9 +12,7 @@ const reducer = (state=[], action) =>{
       return addHandler(state, action)
     case t.REMOVE:
       return removeHandler(state, action)
-    case t.EDIT:
-      return itemHandler(state, action)
-    case t.UNEDIT:
+    case t.LOAD:
       return itemHandler(state, action)
     case t.UPDATE:
       return itemHandler(state, action)

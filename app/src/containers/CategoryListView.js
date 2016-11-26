@@ -8,6 +8,7 @@ import * as actions from '../actions'
 
 
 const mapStateToProps = ({categoryList}, {/*own props*/}) => ({list:categoryList})
+
 const mapDispatchToProps = (dispatch, props) =>( {
 });
 

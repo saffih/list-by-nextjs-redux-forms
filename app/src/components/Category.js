@@ -7,7 +7,6 @@ const RenderField = (field)  => {
   const props = field.meta
   return (
   <div className="input-row">
-    {/* {'>>>'+JSON.stringify(field)+'<<<'} */}
     <label className={styles.label}>{field.placeholder} </label>
     <input className={styles.input} type="text" {...field.input}/>
     {props.touched && props.error && !props.disabled && <span className="error">{props.error}</span>}
@@ -16,8 +15,8 @@ const RenderField = (field)  => {
 
 
 const  Category =  (props) => {
-  const { item, itemActions, onSubmit,
-          handleSubmit, load, pristine, reset, submitting } = props
+  const { item, itemActions,
+          handleSubmit, pristine, submitting, reset } = props;
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit(itemActions.handleUpdate)}>
@@ -31,7 +30,8 @@ const  Category =  (props) => {
                   >Submit</button>
                 <button className={styles.link} type="button"
                   disabled={pristine || submitting}
-                  onClick={reset}>Undo Changes</button>
+                  onClick={reset}
+                  >Undo Changes</button>
                 <button className={styles.link} type="button"
                   disabled={!pristine || submitting}
                   onClick={itemActions.handleRemove}
@@ -57,16 +57,3 @@ const styles={
   dummy: ''
 
 }
-
-//
-// +css({
-//   float: 'left',
-//   color: 'blue',
-//   ':hover': {
-//     color: 'blueviolet'
-//   }
-//   // ,
-//   // '@media (max-width: 500px)': {
-//   //   color: 'rebeccapurple'
-//   // }
-// })

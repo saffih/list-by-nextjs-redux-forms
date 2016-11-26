@@ -14,7 +14,6 @@ const RenderField = (field)  => {
   const props = field.meta
   return (
   <div className="input-row">
-    {/* {''+JSON.stringify(field)} */}
     <label>{field.placeholder} </label>
     <input type="text" {...field.input}/>
     {props.touched && props.error && !props.disabled && <span className="error">{props.error}</span>}
@@ -38,7 +37,6 @@ let  AddCategory =  (props) => {
 
 export default reduxForm({
   form:'AddCategoryForm',
-  // onSubmit:'onSubmit',
   validate
 })(AddCategory)
 

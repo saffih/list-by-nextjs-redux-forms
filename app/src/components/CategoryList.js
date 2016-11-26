@@ -4,7 +4,6 @@ import CategoryView from '../containers/CategoryView'
 
 const CategoryList = ({list=[]}) => (
 <div>
-  {/* <pre>{JSON.stringify(list)}</pre> */}
   {list.map( (item) =>
     <CategoryView key={item.id}
       item={item}
